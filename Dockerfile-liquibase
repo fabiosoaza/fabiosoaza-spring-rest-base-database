@@ -8,8 +8,7 @@ WORKDIR $LIQUIBASE_DIR
 
 RUN mkdir -p $CHANGELOG_DIR
 
-
-#COPY database-changelogs/db.changelog* $CHANGELOG_DIR
+COPY spring-rest-base/database-changelogs/db.changelog* $CHANGELOG_DIR
 
 COPY run-liquibase $LIQUIBASE_DIR
 RUN chmod +x $LIQUIBASE_DIR/run-liquibase
