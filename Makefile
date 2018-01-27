@@ -1,4 +1,4 @@
-docker-build: docker-build-postgres docker-build-liquibase	
+docker-build-images: docker-build-postgres docker-build-liquibase	
 
 docker-build-postgres:
 	docker build . -f Dockerfile-postgres  -t fabiosoaza/spring-rest-base-database:latest
