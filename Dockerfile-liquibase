@@ -1,0 +1,20 @@
+FROM gustajz/liquibase
+
+
+ENV LIQUIBASE_DIR=/liquibase
+ENV CHANGELOG_DIR=$LIQUIBASE_DIR/changelogs/
+
+WORKDIR $LIQUIBASE_DIR
+
+RUN mkdir -p $CHANGELOG_DIR
+
+
+#COPY database-changelogs/db.changelog* $CHANGELOG_DIR
+
+COPY run-liquibase $LIQUIBASE_DIR
+RUN chmod +x $LIQUIBASE_DIR/run-liquibase
+
+CMD sleep 2000
+
+
+

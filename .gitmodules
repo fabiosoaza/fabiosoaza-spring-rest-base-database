@@ -1,0 +1,7 @@
+[submodule "database-changelogs"]
+	path = database-changelogs
+	url = git@github.com:fabiosoaza/spring-rest-base.git
+	branch = master
+[submodule "spring-rest-base"]
+	path = spring-rest-base
+	url = https://github.com/fabiosoaza/spring-rest-base.git
